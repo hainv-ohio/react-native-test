@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 const Movie = (props) => {
   const goToMovieDetail = () => {
@@ -6,7 +6,7 @@ const Movie = (props) => {
   };
 
   return (
-    <View style={styles.container} onStartShouldSetResponder={goToMovieDetail}>
+    <TouchableOpacity onPress={goToMovieDetail} style={styles.container}>
       <Image
         source={{ uri: props.poster }}
         resizeMode="stretch"
@@ -15,15 +15,15 @@ const Movie = (props) => {
       <View style={styles.titleView}>
         <Text style={styles.title}>{props.title}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     width: "90%",
-    borderRadius: 10,
     marginTop: 10,
+    borderRadius: 50,
   },
   image: {
     height: 300,
