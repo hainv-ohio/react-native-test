@@ -9,8 +9,8 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-package-lock.json
-.gitignore
+
+# DEV
 .env
 
 # macOS
