@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   SafeAreaView,
   View,
@@ -10,7 +10,8 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-import api from "../../config";
+
+import { API_URL, API_KEY } from "@env";
 
 import Movie from "./movie";
 
@@ -24,13 +25,12 @@ const Home = ({ navigation, route }) => {
   const getData = async () => {
     var movies = [];
     for (let i = 0; i < 10; i++) {
-      await fetch(`${api.url}?t=${i}&apikey=${api.key}`)
+      await fetch(`${API_URL}?t=${i}&apikey=${API_KEY}`)
         .then((response) => response.json())
         .then((json) => movies.push(json))
         .catch((error) => console.error(error));
     }
     setMovieList(movies);
-    console.log(movies);
   };
 
   return (

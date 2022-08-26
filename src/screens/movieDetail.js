@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   SafeAreaView,
   View,
@@ -10,8 +10,7 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-import api from "../../config";
-import Movie from "../modules/movie";
+import { API_URL, API_KEY } from "@env";
 
 const MovieDetail = ({ navigation, route }) => {
   const [movie, setMovie] = useState(null);
@@ -21,7 +20,7 @@ const MovieDetail = ({ navigation, route }) => {
   }, []);
 
   const getData = async (e) => {
-    await fetch(`${api.url}?i=${route.params.id}&apikey=${api.key}`)
+    await fetch(`${API_URL}?i=${route.params.id}&apikey=${API_KEY}`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json);

@@ -14,6 +14,14 @@ $ cd react-native-test
 $ yarn install or npm install
 ```
 
+Create `.env` file in your root directory and add the following
+
+```sh
+API_URL=http://www.omdbapi.com/
+API_KEY=YOUR_API_KEY_HERE
+
+```
+
 ### How to start
 ```sh
 $ npx expo start

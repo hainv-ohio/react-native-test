@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   SafeAreaView,
   View,
@@ -10,7 +10,7 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-import api from "../../config";
+import { API_URL, API_KEY } from "@env";
 
 import Movie from "./movie";
 
@@ -18,7 +18,7 @@ const Search = ({ navigation, route }) => {
   const [movie, setMovie] = useState(null);
 
   const onSearch = async (e) => {
-    await fetch(`${api.url}?t=${e.text}&apikey=${api.key}`)
+    await fetch(`${API_URL}?t=${e.text}&apikey=${API_KEY}`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
