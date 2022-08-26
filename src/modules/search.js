@@ -44,7 +44,7 @@ const Search = ({ navigation, route }) => {
       <View style={styles.movieListView}>
         {movie && (
           <Movie
-            id={movie.omdbID}
+            id={movie.imdbID}
             poster={movie.Poster}
             title={movie.Title}
             navigation={navigation}
