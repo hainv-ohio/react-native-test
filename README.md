@@ -1,8 +1,8 @@
-# IMDB APP 
+# OMDB APP 
 Discover Movies 
 
 
-![imdbapp-screenshots](https://github.com/hainv-ohio/react-native-test/blob/main/assets/readme.png)
+![omdbapp-screenshots](https://github.com/hainv-ohio/react-native-test/blob/main/assets/readme.png)
 
 ### Installation
 

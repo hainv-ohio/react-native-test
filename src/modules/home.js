@@ -40,8 +40,8 @@ const Home = ({ navigation, route }) => {
           {movieList?.map((movie) => {
             return (
               <Movie
-                key={movie.imdbID}
-                id={movie.imdbID}
+                key={movie.omdbID}
+                id={movie.omdbID}
                 poster={movie.Poster}
                 title={movie.Title}
                 navigation={navigation}
